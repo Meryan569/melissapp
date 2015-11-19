@@ -13,35 +13,24 @@
 	padding-bottom: 0;
 }
 
-.navbar .container-fluid {
-	height: 50px;
-	padding: 0 0 0 10px;
+
+#home {
+	padding: 12px 0 0 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	height: 50px;	
 }
 
 .navbar ul {
 	float: right;
-}
-
-.navbar li {
-	padding-top: 0;	
-	color: white;
-	font-weight: bold;
-}
-
-.navbar ul li a {
+	padding: 0 0 0 15px;
 	color: white;
 	text-transform: uppercase;
-	letter-spacing: 0.05em;	
+	letter-spacing: 0.05em;
+	font-weight: bold;
+	height: 50px;
 }
 
-.navbar a:hover {
-	color: #ff0;
-	text-decoration: none;
-}
-
-.navbar a {
-	transition: color 600ms;
-}
 
 h1 {
 	color: #FF99CC;
@@ -49,21 +38,11 @@ h1 {
 	padding-top: 35px;	
 }
 
-.projectName {
-	text-transform: uppercase;
-	font-size: 16px;
-	padding: 13px;
-}
-
-.projectName a {
-	color: white;
-	padding: 15px;
-}
 
 #carousel-example-generic {		
 	position: relative;
-  margin: auto;
-  padding: 15px;
+  	margin: auto;
+  	padding: 15px;
 		
 }
 
