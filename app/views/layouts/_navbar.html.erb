@@ -14,14 +14,20 @@
             <%= link_to "Home", root_path %>
           </div>
             
-         
+         <div class="search-form">
+            <%= form_tag("/products", method: "get") do %>
+              <%= label_tag(:q, "Search for:") %>
+              <%= text_field_tag(:q) %>
+              <%= submit_tag("Search") %>
+            <% end %>
+          </div>
 
           <ul class="nav navbar-nav">
             <li><%= link_to "Products", products_path %></li>
             <li><%= link_to "About Us", static_pages_about_path %></li>
-            <li><%= link_to "Contact Us", static_pages_contact_path %></li>              
+            <li><%= link_to "Contact Us", static_pages_contact_path %></li>          
                          
           </ul>
-
+          
   </div><!--end navbar collapse-->
 </nav>
