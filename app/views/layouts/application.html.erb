@@ -19,6 +19,13 @@
 
 <h1>Pink Honeybee Designs</h1>
 
+<% if notice %>
+      <p class="alert notice alert-success" role="alert"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger" role="alert"><%= alert %></p>
+    <% end %>
+
  <footer>
     <div class="twitter">    
       <a href="https://twitter.com/MelissaRyanLA" class="twitter-follow-button" data-show-count="false">Follow @MelissaRyanLA</a>
