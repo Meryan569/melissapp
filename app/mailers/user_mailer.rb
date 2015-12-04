@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "admin@pinkhoneybee.com"
 
   def contact_form(email, name, message)
     @message = message
@@ -7,4 +7,10 @@ class UserMailer < ActionMailer::Base
             :to => 'meryan569@gmail.com',
             :subject => "A new contact form message from #{name}")
   end
+
+  def welcome_email(user)
+	    @user = user
+	    mail(to: @user.email, subject: 'Welcome!')
+  end
+
 end
