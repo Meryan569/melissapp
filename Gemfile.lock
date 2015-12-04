@@ -36,7 +36,7 @@ GEM
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.9.1.1)
+    coffee-script-source (1.10.0)
     devise (3.5.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -57,11 +57,11 @@ GEM
     json (1.8.3)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    mime-types (2.6.2)
-    minitest (5.8.1)
+    mime-types (2.99)
+    minitest (5.8.3)
     multi_json (1.11.2)
     orm_adapter (0.5.0)
-    pg (0.18.3-x86-mingw32)
+    pg (0.18.4-x86-mingw32)
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
