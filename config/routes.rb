@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users 
-  
+  devise_for :users
+
   resources :users
 
   root 'static_pages#landing_page'
