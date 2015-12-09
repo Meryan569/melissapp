@@ -1,5 +1,5 @@
-_ = Devise::SessionController
+#_ = Devise::SessionController
 
-class SessionController < Devise::SessionController
-  skip_before_filter :verify_authenticity_token, :only => :destroy
-end
+#class SessionController < Devise::SessionController
+#   skip_before_filter :verify_authenticity_token, :only => :destroy
+# end
