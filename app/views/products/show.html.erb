@@ -1,15 +1,24 @@
-<div class="container">
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
+
 	<div class="row">
 		<div class="col-xs-6 col-md-4">
 			<p><%= @product.name %></p>
 			<p><%=image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: @product.image_url) %></p>
 			<p><%= @product.description %></p>
 			<p><%= @product.color %></p>
+			
+			<div class="rated" data-score="<%= @product.average_rating %>"><p>Average Rating:</p></div>
 		</div>
 	</div>
-</div>
 
-
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= render 'show_comment' %>
+  
+<p>
+          <% if user_signed_in? %>
+            <%= render 'new_comment' %>
+          <% else %>
+             <p id="reviewlogin">You must be <%= link_to('logged in', new_user_session_path) %> to leave a review</p>
+          <% end %>
+       
+</p>  

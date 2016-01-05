@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-	gem 'sqlite3'
+  gem 'sqlite3'
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -43,11 +43,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'devise'
 
 gem 'cancancan'
-
+gem 'will_paginate', '~> 3.0.6'
 
 group :production do 
-	gem 'rails_12factor'
-	gem 'pg'		
+  gem 'rails_12factor'
+  gem 'pg'    
 end
-
-
