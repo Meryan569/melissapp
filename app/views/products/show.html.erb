@@ -9,7 +9,7 @@
 			<p><%= @product.description %></p>
 			<p><%= @product.color %></p>
 			
-			<div class="rated" data-score="<%= @product.average_rating %>"><p>Average Rating:</p></div>
+			<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 		</div>
 	</div>
   
@@ -22,7 +22,7 @@
       	</div> 
 </div><!-- end container-->
 	  
-<%= render 'new_comment' %>
+
 <%= render 'comments' %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
