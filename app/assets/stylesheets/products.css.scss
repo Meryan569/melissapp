@@ -2,4 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+// Show page styles
+
+#about {
+	margin-left: 10%;
+	margin-top: 5%;
+}
+
+.container {
+	padding-top: 2cm;
+}
+
+.img-responsive {
+	margin-left: 20%;
+}
+
+#new-comment {
+	text-align: left;
+}
+
+#new-comment textarea {
+	width: 50%;
+}
+
+#productname {
+	text-align: center;
+}
+
+.row p {
+	padding: 0;
+}
+
+#rate {
+	text-align: left;
+}
+
+.add-review {
+	margin-left: 14%;
+}
 	
