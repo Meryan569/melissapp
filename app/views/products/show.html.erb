@@ -13,16 +13,9 @@
 		</div>
 	</div>
   
-		<div class="add-review">
-          <% if user_signed_in? %>
-            <%= render 'new_comment' %>
-          <% else %>
-             <p id="reviewlogin">You must be <%= link_to('logged in', new_user_session_path) %> to leave a review</p>
-          <% end %>
-      	</div> 
 </div><!-- end container-->
 	  
-
+<%= render 'new_comment' %>
 <%= render 'comments' %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
