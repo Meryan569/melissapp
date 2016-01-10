@@ -10,6 +10,6 @@
 			<p><%= comment.body %></p>
 		</div>
 	<% end %>
-	
+	<%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
 </div>
 
