@@ -6,6 +6,8 @@
   <p id="url"><%= image_tag(product.image_url) %></p>
   
   <p><%= link_to 'Show', product %></p>
-  <p><%= link_to 'Edit', edit_product_path(product) %></p>
-  <p><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></p>
+  <% if signed_in? && current_user.admin? %>
+  	<p><%= link_to 'Edit', edit_product_path(product) %></p>
+  	<p><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></p>
+  <% end %>
 </div>
