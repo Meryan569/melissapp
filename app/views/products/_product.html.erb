@@ -3,7 +3,7 @@
   <p><h2><%= product.name %></h2></p>
   <p><%= product.description %></p>
   <p><%= product.color %></p>
-  <!--<p>$<%= sprintf "%.2f", product.price %></p>-->
+  <p>$<%= product.price %></p>
   <p><%= image_tag(product.image_url) %></p>
   
   <p><%= link_to 'View', product %></p>
