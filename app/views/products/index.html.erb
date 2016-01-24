@@ -1,7 +1,16 @@
-<h1><i>Couture Aprons</i></h1>
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+      <div class="col-md-12">
+        <h1 class="page-heading"><i>Couture Aprons</i></h1>
+        <button class="btn btn-primary center-block"><%= link_to 'Add a new product', new_product_path %></button>
+  </div>
+    <%= render @products %>
+    
+</div>
 
- <%= render @products %>
-<br>
+  </div>
+</div>
 
 
 
