@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  respond_to :json, :html
+  load_and_authorize_resource :except => [:index, :show]
   
   def index
     if params[:q]
