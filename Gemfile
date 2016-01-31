@@ -51,6 +51,10 @@ group :development, :test do
 
 end
 
+group :development, :test do
+	gem 'byebug'
+end
+
 group :development do
 	gem 'guard'
 	gem 'guard-rspec', require: false
