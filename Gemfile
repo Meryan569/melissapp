@@ -44,6 +44,8 @@ gem 'cancancan'
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 
+gem 'angularjs-rails'
+
 group :development, :test do
 	gem 'sqlite3'
 	gem "factory_girl_rails", "~> 4.0"
