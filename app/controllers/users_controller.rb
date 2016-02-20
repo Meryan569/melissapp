@@ -16,12 +16,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    if user_signed_in?
-      @user = set_user
-    else
-      flash[alert] = 'Log in first to see another user!'
-      redirect_to root_path
-    end
+    
   end
 
  
