@@ -10,11 +10,11 @@ class PaymentsController < ApplicationController
       			:amount => (@product.price * 100).to_i,
       			:currency => "usd",
       			:source => token,
-      			:description => params[:stripeEmail]
+      			:description => @product.name + " product purchased by " + params[:stripeEmail]
     		)
         if charge.paid
           Order.create(
-            user_id: @user.id,
+            user_id: current_user,
             product_id: @product.id,
             total: @product.price.to_d / 100
             )

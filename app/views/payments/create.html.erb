@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="panel panel-default">
 		<div class="panel-body">
-			<p>Thank you! Your payment of $<%= number_with_precision(@product.price.to_d / 100, precision: 2) %> has been successfully processed!</p>
+			<p>Thank you! Your payment of $<%= number_with_precision(@product.price.to_d, precision: 2) %> has been successfully processed!</p>
 		</div> <!-- panel-body -->
 	</div> <!-- panel -->
 	<hr>
