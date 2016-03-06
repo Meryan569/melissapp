@@ -7,4 +7,3 @@ class ApplicationController < ActionController::Base
   	redirect_to main_app.users_path, :alert => exception.message
   end
 end
-/
