@@ -11,15 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <div class="form-group">
+        <%= f.label :first_name %><br>
+        <%= f.text_field :first_name, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :last_name %><br>
+        <%= f.text_field :last_name, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :email %><br>
+        <%= f.text_field :email, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.submit 'Update', class: 'btn btn-warning btn-block' %>
+      </div>
+    </div>
   </div>
 <% end %>
