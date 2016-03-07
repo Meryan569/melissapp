@@ -1,19 +1,18 @@
-FactoryGirl.define do
-	sequence(:email) { |n| "user#{n}@example.com" }
+FactoryGirl.define do 
+
+	sequence :email do |n|
+		"User#{n}@example.com"
+	end
+
 	factory :user do
-		email "test1@test.com"
-		password "123456789"
-		first_name "Test"
-		last_name "Example"
+		email 
+		password 'password'
+		first_name 'Arthur'
+		last_name 'Example'
 		admin false
-	end
 
-	factory :admin, class: User do
-  		email "test2@test.com"
-  		password "123456789"
-  		admin true
-  		first_name "Admin"
-  		last_name "User"
+		factory :admin do
+			admin true
+		end
 	end
-
 end

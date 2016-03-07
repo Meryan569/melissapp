@@ -4,6 +4,7 @@ describe UsersController, :type => :controller do
 	
 	before do
 		@user = FactoryGirl.create(:user)
+		@usertwo = FactoryGirl.create(:user)
 	end
 
 	describe "GET #show" do
@@ -19,20 +20,22 @@ describe UsersController, :type => :controller do
 		end
 
 		context "No user is logged in" do
-		 	it "redirects to login" do
+		 	it "redirects to user#index" do
 		 		get :show, id: @user.id
-		 		expect(response).to redirect_to(root_path)
+		 		expect(response).to redirect_to(users_path)
 		 	end
 		end
 
-		context "One user tries to access another users account" do
-			
-			it "redirects to login" do
-				get :show, id: @user.id
-				expect(response).to redirect_to(root_path)
+		context 'User cannot access another users page' do 
+			before do 
+				sign_in @user 
+			end
+			it 'redirects to user#index' do 
+				get :show, id: @usertwo.id 
+				expect(response).to redirect_to(users_path)
 			end
 			it 'responds with HTTP 302 redirect code' do
-				get :show, id: @user.id
+				get :show, id: @usertwo.id
 				expect(response).to have_http_status(302)
 			end
 		end
